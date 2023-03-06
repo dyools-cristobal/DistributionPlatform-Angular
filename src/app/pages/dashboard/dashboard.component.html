@@ -1,0 +1,98 @@
+<div class="banner">
+    <div class="welcome-message">
+        <span class="message-text">Welcome Julz. What would you like to do today?</span>
+    </div>
+</div>
+<div class="quick-links-container">
+    <div class="quick-link">
+        <div class="quick-link_icon">
+            <mat-icon class="material-icons">description</mat-icon>
+        </div>
+        <div class="quick-link_text">
+            <span class="quick-link_text__label">Create New Quote</span>
+            <mat-icon class="material-icons">chevron_right</mat-icon>
+        </div>
+    </div>
+    <div class="quick-link">
+        <div class="quick-link_icon">
+            <mat-icon class="material-icons">description</mat-icon>
+        </div>
+        <div class="quick-link_text">
+            <span class="quick-link_text__label">Go to Quotation List</span>
+            <mat-icon class="material-icons">chevron_right</mat-icon>
+        </div>
+    </div>
+    <div class="quick-link">
+        <div class="quick-link_icon">
+            <mat-icon class="material-icons">description</mat-icon>
+        </div>
+        <div class="quick-link_text">
+            <span class="quick-link_text__label">Go to Policy List</span>
+            <mat-icon class="material-icons">chevron_right</mat-icon>
+        </div>
+    </div>
+    <div class="quick-link">
+        <div class="quick-link_icon">
+            <mat-icon class="material-icons">description</mat-icon>
+        </div>
+        <div class="quick-link_text">
+            <span class="quick-link_text__label">Go to Endorsement</span>
+            <mat-icon class="material-icons">chevron_right</mat-icon>
+        </div>
+    </div>
+
+</div>
+<div class="body">
+    <div class="dp-carousel-wrapper">
+        <button class="dp-carousel_button-prev">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+        <div class="dp-carousel_content">
+
+            <div class="dp-carousel_content-item">
+                <div class="item-content-left">
+                </div>
+                <div class="item-content-right">
+                    <span class="item-content-right_title">Announcement 1</span>
+                    <span class="item-content-right_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Pellentesque a,
+                        diam enim tristique nam nunc.</span>
+                    <button class="btn btn-secondary item-content-right_cta">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <button class="dp-carousel_button-next">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+    </div>
+    <div class="latest-referral-wrapper">
+        <span class="title">Latest Referral</span>
+        <app-chubb-table [tableData]="myQuotes"></app-chubb-table>
+    </div>
+    <div class="sales-performance-wrapper">
+        <span class="sub-title">Sales Performance</span>
+        <div class="my-sales-wrapper">
+            <div class="view-wrapper">
+                <span class="view">View:</span>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>My sales</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="time-wrapper">
+                <span class="time">Time:</span>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Please select</option>
+                    <option value="1">Last 3 months</option>
+                    <option value="2">Last 6 months</option>
+                    <option value="3">Last 12 months</option>
+                </select>
+            </div>
+        </div>
+        <div echarts [options]="chartOption" class="demo-chart"></div>
+        <app-stat-cards></app-stat-cards>
+
+    </div>
+</div>

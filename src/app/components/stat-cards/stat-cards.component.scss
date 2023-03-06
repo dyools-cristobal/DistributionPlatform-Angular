@@ -1,0 +1,28 @@
+@import '../../../assets/css/theme.scss';
+
+
+
+.my-sales-stats-wrapper {
+    display: flex;
+    margin-bottom: 16px;
+    column-gap: 8px;
+    .stat-card {
+        flex: 1;
+        display: grid;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 16px;
+        .stat-progress-bar-wrapper {
+            height: 8px;
+            width: 100%;
+            border-radius: 4px;
+            background-color: $light-gray;
+            .stat-progress {
+                height: 100%;
+               
+                border-radius: 4px;
+                background-color: $alert;
+            }
+        }
+    }
+}

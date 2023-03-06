@@ -1,0 +1,58 @@
+@import '../../../assets/css/theme.scss';
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    padding: 5px 100px;
+    border-bottom: #150F96 2px solid;
+    background: white;
+    width: 100%;
+
+    img.logo{
+        height: 20px;
+        width: auto;
+        background-color: #FFFFFF;
+        margin: 8px 0px;
+    }
+
+    .title {
+        font-family: "Chubb Publico";
+        font-size: 20px;
+        margin: 4px 24px;
+    }
+
+    .nav {
+        width: auto;
+        font-family: Lato;
+        font-size: 16px;
+        display: flex;
+        position: absolute;
+        right: 100px;
+        &-group {
+            display: flex;
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            &__link {
+                &:hover{
+                    background-color: $sky-gray;
+                    cursor: pointer;
+                    color: $chubb-blue;
+                    font-weight: bold;
+                    text-decoration: underline;
+                }
+                
+                padding: 5px 16px;
+            }
+
+        }
+        .divider {
+            padding: 5px 24px;
+        }
+        .user-controls {
+            padding-top: 5px;
+        }
+    }
+}

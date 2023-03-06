@@ -1,0 +1,121 @@
+@import './chubb-fonts.scss';
+@import './helpers.scss';
+@import './variables';
+@import './custom-checkbox.scss';
+@import './input.scss';
+
+body {
+    color: $dark-gray !important;
+}
+
+.page-body {
+    margin: 16px 100px 0px 100px;
+}
+
+
+
+.row > * {
+    padding-left: 0 ;
+}
+.nav {
+    &-item {
+        border-right: none;
+        border-left: none;
+        border-radius: 0px;
+        background-color: $white;
+
+        .nav-link {
+            padding: 20px 70px;
+            font-family: "Chubb Publico";
+            font-size: 20px;
+            color: #4B4E53;
+        }
+
+        .active {
+            border-top: 2px turquoise solid !important;
+            border-right-color: transparent !important;
+            border-left-color: transparent !important;
+            border-top-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+        }
+    }
+
+    &-item:hover {
+        cursor: pointer;
+        background-color: $sky-gray;
+    }
+
+}
+
+
+button {
+    height: 42px;
+    border-radius: 0px !important;
+}
+
+
+.chip {
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-family: 'Verdana';
+
+    &__new {
+        border: 1px solid $purple;
+        color: $purple;
+    }
+
+    &__in-progress {
+        border: 1px solid $info;
+        color: $info;
+    }
+
+    &__reviewing {
+        border: 1px solid $info;
+        color: $info;
+    }
+
+    &__referral-pending-info {
+        border: 1px solid $info;
+        color: $info;
+    }
+
+    &__under-review {
+        border: 1px solid $alert;
+        color: $alert;
+    }
+
+    &__unsuccessful {
+        border: 1px solid $error;
+        color: $error;
+    }
+
+    &__referral-declined {
+        border: 1px solid $error;
+        color: $error;
+    }
+
+    &__bound {
+        border: 1px solid $dark-green;
+        color: $error;
+    }
+
+}
+
+.link {
+    color: $chubb-blue;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+select {
+    font-family: "Chubb Publico";
+}
+
+.row {
+    margin-bottom: 10px;
+}

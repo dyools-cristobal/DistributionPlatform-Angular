@@ -1,0 +1,73 @@
+<app-page-banner [pageTitle]="pageTitle"></app-page-banner>
+<div class="page-body">
+    <span class="title">All Products</span>
+    <div class="search-wrapper">
+        <div class="form-group search-bar">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for product name, coverage and benefits"
+                    aria-label="Search for product name, coverage and benefits" aria-describedby="basic-addon2">
+                <span class="input-group-text" id="basic-addon2">
+                    <mat-icon class="material-icons">search</mat-icon>
+                </span>
+            </div>
+        </div>
+        <div>
+            <label class="container">Buy Online
+                <input type="checkbox" [(ngModel)]="buyOnline">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+    <div class="search-links-wrapper">
+        <div class="search-link">
+            <img src="../../../assets/img/desktop/Icon/A&H.png" alt="A&H">
+            <span>Accident & Health</span>
+        </div>
+        <div class="search-link">
+            <img src="../../../assets/img/desktop/Icon/Casualty.png" alt="A&H">
+            <span>Property & Casualty</span>
+        </div>
+        <div class="search-link">
+            <img src="../../../assets/img/desktop/Icon/Construction.png" alt="A&H">
+            <span>Construction</span>
+        </div>
+        <div class="search-link">
+            <img src="../../../assets/img/desktop/Icon/Cyber.png" alt="A&H">
+            <span>Cyber</span>
+        </div>
+        <div class="search-link">
+            <img src="../../../assets/img/desktop/Icon/Energy.png" alt="A&H">
+            <span>Energy</span>
+        </div>
+        <div class="search-link">
+            <img src="../../../assets/img/desktop/Icon/Environmental.png" alt="A&H">
+            <span>Environmental</span>
+        </div>
+        <div class="search-link">
+            <img src="../../../assets/img/desktop/Icon/FinLines.png" alt="A&H">
+            <span>Financial Lines</span>
+        </div>
+        <div class="search-link">
+            <img src="../../../assets/img/desktop/Icon/Marine.png" alt="A&H">
+            <span>Marine</span>
+        </div>
+    </div>
+    <span class="title p-3">Accident & Health</span>
+    <hr>
+    <div class="product-card-wrapper">
+        <app-product-card *ngFor="let product of productAH" [productInfo]="product"
+            class="product-card"></app-product-card>
+    </div>
+    <span class="title">Property & Casualty</span>
+    <hr>
+    <div class="product-card-wrapper">
+        <app-product-card *ngFor="let product of productCasualty" [productInfo]="product"
+            class="product-card"></app-product-card>
+    </div>
+    <span class="title">Construction</span>
+    <hr>
+    <div class="product-card-wrapper">
+        <app-product-card *ngFor="let product of productConstruction" [productInfo]="product"
+            class="product-card"></app-product-card>
+    </div>
+</div>

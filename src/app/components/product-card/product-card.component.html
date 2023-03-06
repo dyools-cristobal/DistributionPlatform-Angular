@@ -1,0 +1,28 @@
+<div class="product-card">
+    <img [src]="productInfo.imageLink" alt="" class="product-image">
+    <div class="text-wrapper">
+        <mat-chip-listbox aria-label="Dog selection">
+            <mat-chip>
+                <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+                    alt="Photo of a Shiba Inu" />
+                Dog one
+            </mat-chip>
+            <mat-chip color="primary">
+                <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+                    alt="Photo of a Shiba Inu" />
+                Dog two
+            </mat-chip>
+            <mat-chip color="accent">
+                <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+                    alt="Photo of a Shiba Inu" />
+                Dog three
+            </mat-chip>
+        </mat-chip-listbox>
+        <div class="category">{{productInfo.category}}</div>
+        <div class="title">{{productInfo.title}}</div>
+        <div class="card-desc">
+            {{productInfo.description}}
+        </div>
+        <button class="btn btn-primary" [routerLink]="productInfo.actionLink">View Details</button>
+    </div>
+</div>

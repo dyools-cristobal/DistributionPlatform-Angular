@@ -1,0 +1,12 @@
+<div class="my-sales-stats-wrapper">
+
+    <div class="stat-card" *ngFor="let statCard of stats">
+        <mat-icon class="material-icons">{{ statCard.icon }}</mat-icon>
+        <span class="title">{{ statCard.title }}</span>
+        <span>{{ statCard.subTitle }}</span>
+        <mat-progress-bar mode="determinate" [value]="statCard.progress"
+            [color]="progressColor(statCard.progress)"></mat-progress-bar>
+
+    </div>
+
+</div>

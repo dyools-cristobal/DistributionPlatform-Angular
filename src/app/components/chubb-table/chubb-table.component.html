@@ -1,0 +1,24 @@
+<div class="table-container">
+    <table class="chubb-table">
+        <tr class="chubb-table__header">
+            <th *ngFor="let header of tableData.tableColConfig">
+                {{ header.headerLabel }}
+            </th>
+        </tr>
+        <tr class="chubb-table__row" *ngFor="let quote of tableData.quoteList; index as i;">
+            <td *ngFor="let row of tableData.tableColConfig; index as i2">
+                <span
+                    *ngIf="row.headerId !== 'status' && row.headerId !== 'policyNo' && row.headerId !== 'quoteRefNo' && row.HeaderId !== 'handlingUW'">{{
+                    checkValue(row.headerId,
+                    i)
+                    }}</span>
+                <app-status-chip *ngIf="row.headerId === 'status'"
+                    [status]="checkValue(row.headerId, i)"></app-status-chip>
+                <span
+                    *ngIf="row.headerId === 'policyNo' || row.headerId === 'quoteRefNo' || row.HeaderId === 'handlingUW'"
+                    class="link" routerLink="/search">{{ checkValue(row.headerId,
+                    i) }}</span>
+            </td>
+        </tr>
+    </table>
+</div>

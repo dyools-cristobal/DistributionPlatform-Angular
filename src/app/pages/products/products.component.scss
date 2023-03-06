@@ -1,0 +1,36 @@
+@import '../../../assets/css/theme.scss';
+
+.page-body {
+    .search-wrapper {
+        margin: 24px 0px;
+        display: flex;
+        .search-bar {
+            margin-right: 16px;
+            flex: 1;
+        }
+    }
+    .search-links-wrapper {
+        display: flex;
+        margin: 42px 0;
+        .search-link {
+            text-align: center;
+            flex: 1;
+            display: grid;
+            img {
+                margin: auto;
+            }
+        }
+    }
+    .product-card-wrapper {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 24px;
+        .product-card {
+            flex: 1;
+        }
+    }
+}
+
+.demo-chart {
+    height: 400px;
+  }
